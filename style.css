@@ -1,0 +1,426 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+.section-title span {
+    color: rgb(255, 77, 0);
+}
+
+.cta {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta:hover {
+    color: white;
+    background-color: black;
+}
+
+#one {
+    background-image: url(./joanna-kosinska-1_CMoFsPfso-unsplash.jpg);
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+#one h1 {
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: rgb(0, 0, 0);
+    animation: text_reveal 0.5s ease forwards;
+    opacity: 0;
+}
+
+#one h1:nth-child(1) { animation-delay: 1.5s; }
+#one h1:nth-child(2) { animation-delay: 2.5s; }
+#one h1:nth-child(3) { animation-delay: 3.5s; }
+
+#one h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    animation: text_reveal_box 1s ease forwards;
+}
+
+#one h1:nth-child(1) span { animation-delay: 1s; }
+#one h1:nth-child(2) span { animation-delay: 2s; }
+#one h1:nth-child(3) span { animation-delay: 3s; }
+
+#one .cta {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#one .cta:hover {
+    color: white;
+    background-color: black;
+}
+
+#services {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#services .service-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+#services .service-item {
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(./1111.jpg);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#services .service-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+#services .service-bottom .icon {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+#services .service-item h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#services .service-item p {
+    color: white;
+}
+
+#projects .projects {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+    display: flex;
+}
+
+#projects .all-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#projects .project-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#projects .project-info {
+    padding: 30px;
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-image: linear-gradient(60deg, #29323c 0%, rgb(255, 3, 3));
+    color: white;
+}
+
+#projects .project-info h1 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+#projects .project-info h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+#projects .project-info p {
+    color: white;
+}
+
+#projects .project-img {
+    flex-basis: 50%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+#projects .project-img::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+}
+
+#projects .project-img img{
+    transition: .3s ease transform;
+}
+
+#projects .project-item:hover .project-img {
+    transform: scale(1.1);
+    
+}
+
+#about .about{
+    flex-direction:column-reverse ;
+    text-align: center;
+    max-width: center;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+#about .col-left{
+    width:250px;
+    height:360px;
+
+}
+#about .col-right{
+    width: 100%;
+}
+#about .col-right h2{
+   font-size: 1.8rem;
+   font-weight:500;
+   letter-spacing:1.2rem;
+   margin-bottom:10px; 
+}
+
+#about .col-right p{
+    margin-bottom:20px;
+}
+
+#about .col-right .cta{
+    color:red;
+    margin-bottom:50px;
+    padding:10px 20px;
+    font-size: 2rem;
+}
+#about .col-left .about-img{
+   height:100%;
+   width:100%;
+   position: relative;
+   border: 5px solid rgb(253,141,141);
+}
+
+
+
+#about .col-left .about-img {
+    position: relative; /* ✅ Required for ::after to work */
+}
+
+#about .col-left .about-img::after {
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 98%; 
+    border: 7px solid rgb(255, 0, 0); 
+    z-index: -1;
+}
+
+#contact .contact {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#contact .contact-items {
+    width: 400px;
+}
+
+#contact .contact-item {
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+    border: 2px solid red; 
+   
+}
+
+
+
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px; /* Optional: gives a clean look */
+}
+#about .about-img {
+    width: 200px;
+    height: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#contact .contact-item {
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+    border: 2px solid red;
+}
+
+
+img.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px; /* adjust as needed */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes text_reveal_box {
+    0% {
+        width: 0;
+        left: 0;
+    }
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100% {
+        opacity: 1;
+    }
+}
+
